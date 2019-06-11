@@ -1,5 +1,5 @@
 import Server from './src/server'
-const port = 3000
+const port = 3001
 
 const server = Server.start({ port })
 
