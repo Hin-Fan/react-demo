@@ -6,7 +6,7 @@
  * @returns {Array[Number]} A list of prime numbers that are >= max.
  */
 export const getPrimeList = max => {
-  if (typeof max !== 'number' || max < 0) throw new Error('INVALID_INPUT')
+  if (isNaN(max) || max < 0 || max !== (max | 0)) throw new Error('INVALID_INPUT')
 
   const numberList = new Array(max + 1).fill(true)
 
@@ -46,3 +46,9 @@ export const getMedian = array => {
  * less then max.
  */
 export const getPrimeMedians = max => getMedian(getPrimeList(max))
+
+export default {
+  getMedian,
+  getPrimeList,
+  getPrimeMedians
+}

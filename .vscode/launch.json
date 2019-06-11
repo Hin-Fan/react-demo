@@ -7,6 +7,16 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Start Server",
+      "program": "${workspaceRoot}/index.js",
+      "runtimeArgs": [
+        "-r",
+        "esm"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Mocha Tests",
       "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
       "args": [
