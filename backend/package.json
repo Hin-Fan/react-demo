@@ -1,15 +1,12 @@
 {
-  "name": "react-demo",
+  "name": "backend",
   "version": "1.0.0",
   "description": "This is the backend of the react-demo using NodeJS",
   "type": "module",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "dependencies": {
-    "backend": "file:backend",
-    "frontend": "file:frontend"
+    "esm": "^3.2.25",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
@@ -18,7 +15,7 @@
   },
   "scripts": {
     "test": "mocha -r esm",
-    "start": "node -r esm index.js",
+    "start": "node -r esm server.js",
     "standard": "standard --fix"
   },
   "author": "",
