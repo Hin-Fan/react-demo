@@ -2,12 +2,12 @@ import Link from 'next/link'
 
 const Index = props => (
   <div>
-    <Link href="/about">
+    <Link href='/about'>
       <button>Go to About Page</button>
     </Link>
     <p>This is the index page</p>
   </div>
-);
+)
 
 // Index.getInitialProps = async function () {
 //   const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
@@ -20,4 +20,4 @@ const Index = props => (
 //   };
 // };
 
-export default Index;
+export default Index

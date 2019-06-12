@@ -1,3 +1,3 @@
-import next from 'next';
+import next from 'next'
 
-export default next ({dev: process.env.NODE_ENV !== 'production'})
+export default next({ dev: process.env.NODE_ENV !== 'production' })

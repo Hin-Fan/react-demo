@@ -5,7 +5,7 @@ const server = Server.listen(port, () => console.log(`Listening on port ${port}`
 
 /**
  * Attempt to gracefully stop the service and release all its resources
- * @param {String | Number} signal 
+ * @param {String | Number} signal
  */
 const gracefulShutdown = signal => {
   console.log(`Received signal ${signal}, closing port ${port}`)
