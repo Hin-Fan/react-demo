@@ -22,9 +22,7 @@
   "scripts": {
     "dev": "next",
     "standard": "standard --fix",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC"

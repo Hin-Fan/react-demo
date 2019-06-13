@@ -9,7 +9,7 @@ exports[`With Enzyme should match with snapshot 1`] = `
   <h1
     id="description"
   >
-    Please give me a positive number and I will tell you the median all prime numbers less than that.
+    Please give me a positive number and I will tell you the median of all prime numbers less than that.
   </h1>
   <input
     id="max"

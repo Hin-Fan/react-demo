@@ -38,7 +38,7 @@ class Index extends Component {
   render () {
     return (
       <form id='primeMedian' onSubmit={() => this.submitHandler()} action='javascript:void(0);'>
-        <h1 id='description'>Please give me a positive number and I will tell you the median all prime numbers less than that.</h1>
+        <h1 id='description'>Please give me a positive number and I will tell you the median of all prime numbers less than that.</h1>
         <input
           name='max'
           type='number'

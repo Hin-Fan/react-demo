@@ -1,6 +1,5 @@
-import wtf from 'wtfnode'
 import Backend from 'backend'
-import next from 'next'
+import next from 'frontend'
 import { createServer } from 'http'
 import { parse } from 'url'
 
@@ -29,32 +28,6 @@ const main = async () => {
       if (err) throw err
       console.log(`Frontend ready on http://localhost:${frontenePort}`)
     })
-
-    /*
-     * Attempt to gracefully stop the service and release all its resources
-     * @param {String | Number} signal
-     */
-    const gracefulShutdown = async signal => {
-      console.log(`Received signal ${signal}, closing port ${backendPort}`)
-      const pendingTasks = Object.keys(servers)
-        .map(name => new Promise(resolve => servers[name].close(() => {
-          console.log(`${name} closed`)
-          delete servers[name]
-          resolve(0)
-        })))
-
-      const shutdownTimedout = new Promise(resolve => setTimeout(() => {
-        console.error(`One or more resources can not be shutdown gracefully`, JSON.stringify(Object.keys(servers)))
-        wtf.dump()
-        resolve(1)
-      }, 2000))
-      process.exit(await Promise.race([Promise.all(pendingTasks), shutdownTimedout]))
-    }
-
-    /** close server upon SIGTERM */
-    process
-      .on('SIGTERM', gracefulShutdown)
-      .on('SIGINT', gracefulShutdown)
   } catch (err) {
     console.error(err)
   }
