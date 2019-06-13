@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With Enzyme should match with snapshot 1`] = `
+<form
+  action="javascript:void(0);"
+  id="primeMedian"
+  onSubmit={[Function]}
+>
+  <h1
+    id="description"
+  >
+    Please give me a positive number and I will tell you the median all prime numbers less than that.
+  </h1>
+  <input
+    id="max"
+    min="0"
+    name="max"
+    onChange={[Function]}
+    type="number"
+    value={0}
+  />
+  <input
+    type="submit"
+  />
+  <p
+    id="result"
+  >
+    Result: 
+    
+  </p>
+</form>
+`;
